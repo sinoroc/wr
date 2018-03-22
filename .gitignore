@@ -1,0 +1,16 @@
+#
+
+
+/build/
+
+
+# tox
+/.tox/
+
+
+# vi / vim
+.*.swp
+*~
+
+
+# EOF

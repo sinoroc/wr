@@ -1,0 +1,34 @@
+#
+
+
+# For user/organization GitHub always publishes pages from branch 'master', so
+# Travis should monitor branch 'gh-pages' and push on branch 'master'
+
+
+language: 'python'
+
+python:
+  - '3.6'
+
+install:
+  - 'pip install tox'
+
+script:
+  - 'tox -e build'
+  - 'touch build/.nojekyll'
+
+branches:
+  only:
+    - 'gh-pages'
+
+deploy:
+  - provider: 'pages'
+    skip_cleanup: true
+    on:
+      branch: 'gh-pages'
+    target_branch: 'master'
+    local_dir: 'build'
+    github_token: '${GITHUB_TOKEN}'
+
+
+# EOF
