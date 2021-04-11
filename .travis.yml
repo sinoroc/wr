@@ -19,14 +19,14 @@ script:
 
 branches:
   only:
-    - 'gh-pages'
+    - 'main'
 
 deploy:
   - provider: 'pages'
     skip_cleanup: true
     on:
-      branch: 'gh-pages'
-    target_branch: 'master'
+      branch: 'main'
+    target_branch: 'gh-pages'
     local_dir: 'build'
     github_token: '${GITHUB_TOKEN}'
 
