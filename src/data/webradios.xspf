@@ -14,7 +14,7 @@
    <location>https://listen.radioking.com/radio/477719/stream/534044</location>
   </track>
   <track>
-   <location>http://pbb.laurentgarnier.com:8000/pbb128</location>
+   <location>http://relay-01.pbbradio.com:8000/128</location>
   </track>
   <track>
    <location>http://listen.radioking.com/radio/1906/stream/6029</location>
